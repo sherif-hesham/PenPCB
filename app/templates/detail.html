@@ -11,6 +11,10 @@
 {% endblock %}
 
 {% block content %}
+<span style="font-size: 15px; color:#4d4dff"
   <p>Created {{ entry.timestamp.strftime('%m/%d/%Y at %G:%I%p') }}</p>
+</span>
+  <div style="font-size:30px">
   {{ entry.html_content }}
+  </div>
 {% endblock %}

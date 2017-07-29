@@ -6,7 +6,9 @@
   {% if search %}
     Search "{{ search }}"
   {% else %} 
-    Poetry 
+  <span id="TheWordPoetry" >
+    P o e t r y 
+   </span>
   {% endif %}
 {% endblock %}
 
@@ -17,10 +19,12 @@
       {% endif %}
     <a class="sh-entry-link" href="{% if entry.published %}{{ url_for('detail', slug=entry.slug) }}{% else %}{{ url_for('edit', slug=entry.slug) }}{% endif %}">
       <div class="sh-entry">
-        <h3>
+        <h3 style="font-size:30px; margin-top: 10px ">
             {{ entry.title }}
         </h3>
+        <span style="font-size: 15px; color:#4d4dff"
         <p>Created {{ entry.timestamp.strftime('%m/%d/%Y at %G:%I%p') }}</p>
+        </span>
       </div>
     </a>
   {% else %}
