@@ -11,10 +11,14 @@
 {% endblock %}
 
 {% block content %}
-<span style="font-size: 15px; color:#4d4dff"
+<span style="font-size: 10px; color:#4d4dff"
   <p>Created {{ entry.timestamp.strftime('%m/%d/%Y at %G:%I%p') }}</p>
 </span>
-  <div style="font-size:30px">
+  <div id = "poem">
   {{ entry.html_content }}
   </div>
+<div id="fbcomments">
+    <hr>
+  <div class="fb-comments" data-href={{request.base_url}} data-width="500" data-numposts="5"></div>
+</div>
 {% endblock %}

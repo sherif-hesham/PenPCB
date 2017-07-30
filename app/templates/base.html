@@ -1,8 +1,9 @@
-<!doctype html>	
+<!doctype html>
 <html>
   <head>
+    <script src="https://use.fontawesome.com/5d0d80a320.js"></script>
     <title>
-    	Pen & PCB 
+    	Pen & PCB
     </title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +20,15 @@
   </head>
 
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
 	  <div class="navbar navbar-default navbar-static-top" role="navigation">
 		      <div class="container">
 		        <div class="navbar-header">
@@ -30,7 +40,7 @@
 		          </button>
 		          <a class="navbar-brand" href="{{ url_for('index') }}">
 		          	<span style="color: #0000b3">Pen </span>
-				    <span style="color: #007A66;" >  &  </span> 
+				    <span style="color: #007A66;" >  &  </span>
 				    <span style="color: #00cc00"> PCB </span>
 		          </a>
 		        </div>
@@ -53,7 +63,7 @@
 		        </div>
 		      </div>
 		    	</div>
-		<div class="sh-box" style="text-align:center;"> 
+		<div class="sh-box" style="text-align:center;">
 			<p id="intro">
 				Thinking like an engineer.
 				<br>

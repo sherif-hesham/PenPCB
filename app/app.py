@@ -21,7 +21,7 @@ from playhouse.sqlite_ext import *
 # You may consider using a one-way hash to generate the password, and then
 # use the hash again in the login view to perform the comparison. This is just
 # for simplicity.
-ADMIN_PASSWORD = 'secret'
+ADMIN_PASSWORD = 'AFlaskOfFeeling'
 APP_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # The playhouse.flask_utils.FlaskDB object accepts database URL configuration.
@@ -260,9 +260,15 @@ def clean_querystring(request_args, *keys_to_remove, **new_values):
 def not_found(exc):
     return Response('<h3>Not found</h3>'), 404
 
+"""
 def main():
     database.create_tables([Entry, FTSEntry], safe=True)
     app.run(debug=True)
+"""
+def main():
+    database.create_tables([Entry, FTSEntry], safe=True)
+    if 'liveconsole' not in gethostname():
+        app.run()
 
 if __name__ == '__main__':
     main()
